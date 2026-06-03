@@ -1260,17 +1260,17 @@ function renderStatManager() {
       ontouchmove="touchMove(event)"
       ontouchend="touchEnd(event)"
       style="display:flex;align-items:center;gap:6px;padding:6px 8px;background:var(--bg);border:1px solid var(--border2);margin-bottom:4px;cursor:grab;touch-action:none;">
-      <span style="color:var(--text3);font-size:14px;cursor:grab;flex-shrink:0;">⠿</span>
+      <span style="color:var(--text3);font-size:90%;cursor:grab;flex-shrink:0;">⠿</span>
       <div style="flex:1;min-width:0;">
-        <span style="font-family:var(--font-pixel);font-size:7px;color:var(--accent);">${escHtml(s.label)}</span>
-        <span style="font-family:var(--font-pixel);font-size:6px;color:var(--text3);margin-left:5px;"></span>
-        <span style="font-family:var(--font-pixel);font-size:6px;color:var(--text3);margin-left:5px;">[${escHtml(s.group)}]</span>
+        <span style="font-family:var(--font-pixel);font-size:60%;color:var(--accent);">${escHtml(s.label)}</span>
+        <span style="font-family:var(--font-pixel);font-size:50%;color:var(--text3);margin-left:5px;"></span>
+        <span style="font-family:var(--font-pixel);font-size:50%;color:var(--text3);margin-left:5px;">[${escHtml(s.group)}]</span>
       </div>
       <button class="pm-btn pm-btn-sm" style="background:var(--panel2);border-color:var(--border);color:var(--accent);font-size:7px;"
         onclick="openEditStatModal(${i})">✎</button>
       <button class="pm-btn pm-btn-danger pm-btn-sm" onclick="deleteEditableStat('${s.id}')">✕</button>
     </div>`).join('') ||
-    `<div style="color:var(--text3);font-family:var(--font-pixel);font-size:7px;padding:8px;">${t('statMgr.noEditable')}</div>`;
+    `<div style="color:var(--text3);font-family:var(--font-pixel);font-size:60%;padding:8px;">${t('statMgr.noEditable')}</div>`;
 
   const allGroupsOpts = [...FIXED_GROUPS, ...editableGroups, t('statMgr.newGroup') || '+ 새 그룹']
     .filter((g, i, a) => a.indexOf(g) === i)
@@ -2031,12 +2031,12 @@ function calendarHTML() {
           ${taskSelector}
           <div style="display:flex;gap:8px;margin-left:auto;">
             <div style="background:var(--bg);border:1px solid var(--border2);padding:4px 10px;text-align:center;">
-              <div style="font-family:var(--font-pixel);font-size:6px;color:var(--text3);">${t('calendar.streak')}</div>
-              <div style="font-family:var(--font-pixel);font-size:12px;color:var(--gold);">${streak}${day}</div>
+              <div style="font-family:var(--font-pixel);font-size:50%;color:var(--text3);">${t('calendar.streak')}</div>
+              <div style="font-family:var(--font-pixel);font-size:90%;color:var(--gold);">${streak}${day}</div>
             </div>
             <div style="background:var(--bg);border:1px solid var(--border2);padding:4px 10px;text-align:center;">
-              <div style="font-family:var(--font-pixel);font-size:6px;color:var(--text3);">${t('calendar.total')}</div>
-              <div style="font-family:var(--font-pixel);font-size:12px;color:var(--gold);">${totalDone}${day}</div>
+              <div style="font-family:var(--font-pixel);font-size:50%;color:var(--text3);">${t('calendar.total')}</div>
+              <div style="font-family:var(--font-pixel);font-size:90%;color:var(--gold);">${totalDone}${day}</div>
             </div>
           </div>
         </div>
