@@ -1994,10 +1994,23 @@ function toggleSign(prefix, i) {
 
 function addEffectOf(prefix) {
   if (prefix === 'add') {
+    // 1. render() 하기 전에 현재 입력값을 임시 저장
+    const nameEl = document.getElementById('new-task-name');
+    const savedName = nameEl ? nameEl.value : '';
+
     state.pendingEffects = readEffectsOf('add');
     state.pendingEffects.push({ statId:'hp', value:1, sign:'+' });
-    render();
+    
+    render(); // 화면 전체 갱신
+
+    // 2. render() 직후 저장된 값을 다시 넣어줌
+    const newNameEl = document.getElementById('new-task-name');
+    if (newNameEl) {
+      newNameEl.value = savedName;
+      newNameEl.focus(); // 커서도 다시 원래 위치로
+    }
   } else {
+    // else 문 내부(edit)는 render()를 직접 부르지 않으므로 그대로 두셔도 됩니다.
     state._editEffects = readEffectsOf('edit');
     state._editEffects.push({ statId:'hp', value:1, sign:'+' });
     const list = document.getElementById('edit-effects-list');
@@ -2059,7 +2072,7 @@ function addTask() {
   persist();
   render();
   setTimeout(() => { const el = document.getElementById('new-task-name'); if(el){el.value='';el.focus();} }, 0);
-}
+  }
 
 function removeTask(id) {
   state.tasks = state.tasks.filter(t => t.id !== id);
