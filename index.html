@@ -11,7 +11,7 @@ E html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>✦ Princess Maker ✦</title>
+<title>✦ Hero Adventure ✦</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
 <style>
@@ -630,8 +630,8 @@ main {
   font-size: 80%;
   gap: 8px;
 }
-.info-row-key { color: var(--text3); font-family: var(--font-pixel); font-size: 60%; }
-.info-row-val { color: var(--accent); font-family: var(--font-pixel); font-size: 60%; word-break: break-all;}
+.info-row-key { color: var(--text3); font-family: var(--font-pixel); font-size: 70%; }
+.info-row-val { color: var(--accent); font-family: var(--font-pixel); font-size: 70%; word-break: break-all;}
 
 .danger-zone { display: flex; flex-direction: column; gap: 8px; }
 .danger-note {
@@ -861,7 +861,7 @@ footer {
 
 <!-- HEADER -->
 <header style="justify-content:center;">
-  <div class="header-title gold-glow" id="app-title">✦ PRINCESS MAKER ✦</div>
+  <div class="header-title gold-glow" id="app-title">✦ Hero Adventure ✦</div>
 </header>
 
 <!-- NAV -->
@@ -889,7 +889,7 @@ footer {
 // ─── I18N ──────────────────────────────────────────────────────────────────
 const I18N = {
   ko: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'스테터스', tasks:'일일 과제', calendar:'캘린더', ai:'AI 해석', settings:'설정' },
     status:{ title:'스테터스' },
     tasks:{ addTitle:'새 일일 과제 추가', listTitle:'일일 과제 목록', namePH:'예: 머리 빗기, 운동하기...', nameLabel:'과제 이름', statLabel:'반영할 스테터스 (복수 / ± 선택 가능)', addStatBtn:'＋ 스테터스 추가', addBtn:'＋ 과제 추가', progress:'오늘의 진행률', empty:'과제가 없습니다.\n왼쪽에서 새로운 과제를 추가해보세요!', done:'완료', editTitle:'과제 편집', save:'저장', cancel:'취소' },
@@ -901,7 +901,7 @@ const I18N = {
     themes:{"antiqueBrown": "앤티크 브라운", "babyPink": "베이비 핑크", "sageGreen": "세이지 그린", "babyBlue": "시나모롤 블루", "lemonSoft": "레몬 소르베"},
   },
   en: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'Status', tasks:'Daily Tasks', calendar:'Calendar', ai:'AI Journal', settings:'Settings' },
     status:{ title:'Status' },
     tasks:{ addTitle:'Add Daily Task', listTitle:'Daily Task List', namePH:'e.g. Brush hair, Exercise...', nameLabel:'Task Name', statLabel:'Stats to apply (multi / ± selectable)', addStatBtn:'＋ Add Stat', addBtn:'＋ Add Task', progress:"Today's Progress", empty:'No tasks yet.\nAdd one on the left!', done:'done', editTitle:'Edit Task', save:'Save', cancel:'Cancel' },
@@ -913,7 +913,7 @@ const I18N = {
     themes:{"antiqueBrown": "Antique Brown", "babyPink": "Baby Pink", "sageGreen": "Sage Green", "babyBlue": "Cinnamoroll Blue", "lemonSoft": "Lemon Sorbet"},
   },
   ja: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'ステータス', tasks:'デイリー課題', calendar:'カレンダー', ai:'AI日記', settings:'設定' },
     status:{ title:'ステータス' },
     tasks:{ addTitle:'デイリー課題を追加', listTitle:'デイリー課題一覧', namePH:'例: 髪を梳かす、運動する...', nameLabel:'課題名', statLabel:'反映するステータス（複数／±選択可）', addStatBtn:'＋ ステータス追加', addBtn:'＋ 課題追加', progress:'今日の進捗', empty:'課題がありません。\n左から追加してください！', done:'完了', editTitle:'課題編集', save:'保存', cancel:'キャンセル' },
@@ -925,7 +925,7 @@ const I18N = {
     themes:{"antiqueBrown": "アンティークブラウン", "babyPink": "ベビーピンク", "sageGreen": "セージグリーン", "babyBlue": "シナモロールブルー", "lemonSoft": "レモンソルベ"},
   },
   zh: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'属性', tasks:'日常任务', calendar:'日历', ai:'AI日记', settings:'设置' },
     status:{ title:'属性' },
     tasks:{ addTitle:'添加日常任务', listTitle:'日常任务列表', namePH:'例如: 梳头、运动...', nameLabel:'任务名称', statLabel:'反映的属性（可多选 / ± 选择）', addStatBtn:'＋ 添加属性', addBtn:'＋ 添加任务', progress:'今日进度', empty:'还没有任务。\n请在左侧添加！', done:'完成', editTitle:'编辑任务', save:'保存', cancel:'取消' },
@@ -937,7 +937,7 @@ const I18N = {
     themes:{"antiqueBrown": "古典棕", "babyPink": "婴儿粉", "sageGreen": "鼠尾草绿", "babyBlue": "肉桂狗蓝", "lemonSoft": "柠檬雪葩"},
   },
   fr: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'Statuts', tasks:'Tâches', calendar:'Calendrier', ai:'Journal IA', settings:'Paramètres' },
     status:{ title:'Statuts' },
     tasks:{ addTitle:'Ajouter une tâche', listTitle:'Liste des tâches', namePH:'ex: Se coiffer, Faire du sport...', nameLabel:'Nom de la tâche', statLabel:'Stats (multi / ±)', addStatBtn:'＋ Ajouter stat', addBtn:'＋ Ajouter', progress:'Progression du jour', empty:'Pas de tâches.\nAjoutez-en une à gauche!', done:'fait', editTitle:'Modifier tâche', save:'Sauvegarder', cancel:'Annuler' },
@@ -949,7 +949,7 @@ const I18N = {
     themes:{"antiqueBrown": "Brun Antique", "babyPink": "Rose Bébé", "sageGreen": "Vert Sauge", "babyBlue": "Bleu Cinnamoroll", "lemonSoft": "Sorbet Citron"},
   },
   de: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'Status', tasks:'Aufgaben', calendar:'Kalender', ai:'KI-Tagebuch', settings:'Einstellungen' },
     status:{ title:'Status' },
     tasks:{ addTitle:'Aufgabe hinzufügen', listTitle:'Aufgabenliste', namePH:'z.B. Haare kämmen, Sport...', nameLabel:'Aufgabenname', statLabel:'Statistiken (mehrfach / ±)', addStatBtn:'＋ Stat hinzufügen', addBtn:'＋ Hinzufügen', progress:'Tagesfortschritt', empty:'Keine Aufgaben.\nLinks hinzufügen!', done:'erledigt', editTitle:'Aufgabe bearbeiten', save:'Speichern', cancel:'Abbrechen' },
@@ -961,7 +961,7 @@ const I18N = {
     themes:{"antiqueBrown": "Antikbraun", "babyPink": "Babyrosa", "sageGreen": "Salbeigrün", "babyBlue": "Cinnamoroll-Blau", "lemonSoft": "Zitronensorbet"},
   },
   es: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'Estado', tasks:'Tareas', calendar:'Calendario', ai:'Diario IA', settings:'Ajustes' },
     status:{ title:'Estado' },
     tasks:{ addTitle:'Añadir tarea diaria', listTitle:'Lista de tareas', namePH:'ej: Peinarse, Hacer ejercicio...', nameLabel:'Nombre de tarea', statLabel:'Stats (múltiple / ±)', addStatBtn:'＋ Añadir stat', addBtn:'＋ Añadir', progress:'Progreso de hoy', empty:'Sin tareas.\n¡Añade una a la izquierda!', done:'hecho', editTitle:'Editar tarea', save:'Guardar', cancel:'Cancelar' },
@@ -973,7 +973,7 @@ const I18N = {
     themes:{"antiqueBrown": "Marrón Antiguo", "babyPink": "Rosa Bebé", "sageGreen": "Verde Salvia", "babyBlue": "Azul Cinnamoroll", "lemonSoft": "Sorbete de Limón"},
   },
   ru: {
-    appTitle:'PRINCESS MAKER',
+    appTitle:'HERO ADVENTURE',
     nav:{ status:'Статус', tasks:'Задания', calendar:'Календарь', ai:'Дневник ИИ', settings:'Настройки' },
     status:{ title:'Статус' },
     tasks:{ addTitle:'Добавить задание', listTitle:'Список заданий', namePH:'напр: Расчесать волосы, Тренировка...', nameLabel:'Название задания', statLabel:'Статы (мультивыбор / ±)', addStatBtn:'＋ Добавить стат', addBtn:'＋ Добавить', progress:'Прогресс за день', empty:'Нет заданий.\nДобавьте слева!', done:'выполнено', editTitle:'Редактировать задание', save:'Сохранить', cancel:'Отмена' },
@@ -1864,9 +1864,9 @@ function renderSettings(main) {
           <div class="window-title"><span class="window-title-icon">ℹ️</span> ${t('settings.infoTitle')}</div>
           <div class="window-body">
             <div class="info-grid">
-              <div class="info-row"><span class="info-row-key">${t('settings.appName')}</span><span class="info-row-val">Princess Maker</span></div>
+              <div class="info-row"><span class="info-row-key">${t('settings.appName')}</span><span class="info-row-val">Hero Adventure</span></div>
               <div class="info-row"><span class="info-row-key">${t('settings.version')}</span><span class="info-row-val">v1.4.0</span></div>
-              <div class="info-row"><span class="info-row-key">${t('settings.pkg')}</span><span class="info-row-val">com.princessmaker</span></div>
+              <div class="info-row"><span class="info-row-key">${t('settings.pkg')}</span><span class="info-row-val">com.heroadventure</span></div>
               <div class="info-row"><span class="info-row-key">${t('settings.statReset')}</span><span class="info-row-val">${t('settings.noReset')}</span></div>
               <div class="info-row"><span class="info-row-key">${t('settings.taskReset')}</span><span class="info-row-val">${t('settings.autoReset')}</span></div>
             </div>
@@ -2112,7 +2112,7 @@ function downloadExport() {
   const blob = new Blob([buildExportJSON()], { type:'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `princess-maker-${new Date().toISOString().slice(0,10)}.json`;
+  a.download = `hero-adventure-${new Date().toISOString().slice(0,10)}.json`;
   a.click();
   URL.revokeObjectURL(a.href);
   toast('⬇ 파일 저장 완료');
