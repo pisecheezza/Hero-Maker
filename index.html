@@ -33,10 +33,10 @@ E html>
   --text3:      #8c6e3a;
   --bar1:       #8c5e20;
   --bar2:       #d4a85a;
-  --done:       #4ade80;
-  --done-bg:    #052e1644;
-  --red:        #e11d48;
-  --red-bg:     #ffe4e688;
+  --done:      #166534;    /* 아주 어두운 녹색 (대비 강조) */
+  --done-bg:   #dcfce7;    /* 매우 밝은 녹색 배경 */
+  --red:       #9f1239;    /* 아주 어두운 빨간색 (대비 강조) */
+  --red-bg:    #fee2e2;    /* 매우 밝은 분홍색 배경 */
   --font-pixel: 'Press Start 2P', monospace;
   --font-body:  'Noto Sans KR', sans-serif;
 }
@@ -264,7 +264,7 @@ main {
   border-color: var(--accent);
   box-shadow: 0 0 10px var(--accent2);
 }
-.stat-card-en { font-family: var(--font-pixel); font-size: 40%; color: var(--text3); margin-bottom: 4px; }
+.stat-card-en { font-family: var(--font-pixel); font-size: 60%; color: var(--text3); margin-bottom: 4px; }
 .stat-card-val { font-family: var(--font-pixel); font-size: 80%; color: var(--gold); margin-bottom: 4px; }
 .stat-card-label { font-size: 80%; color: var(--accent); }
 
@@ -348,18 +348,20 @@ main {
 }
 .pm-btn-primary:hover { background: #7c3db0; }
 .pm-btn-success {
-  background: #166534;
-  border-color: var(--done);
-  color: var(--done);
+  /* 배경은 밝은 녹색, 글자와 테두리는 매우 어두운 녹색 */
+  background: #dcfce7; 
+  border-color: #166534;
+  color: #166534;
   box-shadow: 2px 2px 0 #166534;
 }
 .pm-btn-danger {
-  background: #7f1d1d88;
-  border-color: var(--red);
-  color: var(--red);
-  box-shadow: 2px 2px 0 #7f1d1d;
+  /* 배경은 옅은 빨간색, 글자와 테두리는 어두운 빨간색 */
+  background: #fee2e2;
+  border-color: #991b1b;
+  color: #991b1b;
+  box-shadow: 2px 2px 0 #991b1b;
 }
-.pm-btn-danger:hover { background: #7f1d1dcc; }
+.pm-btn-danger:hover { background: #fecaca;; }
 .pm-btn-sm { padding: 4px 10px; font-size: 60%; }
 .pm-btn-full { width: 100%; }
 
@@ -652,7 +654,7 @@ footer {
   display: flex;
   justify-content: center;
   font-family: var(--font-pixel);
-  font-size: 50%;
+  font-size: 60%;
   color: var(--text3);
   letter-spacing: 2px;
 }
@@ -728,7 +730,7 @@ footer {
 
 .bubble-label {
   font-family: var(--font-pixel);
-  font-size: 50%;
+  font-size: 60%;
   color: var(--text3);
   padding: 0 4px;
 }
@@ -770,7 +772,7 @@ footer {
 }
 .ai-effect-chip {
   font-family: var(--font-pixel);
-  font-size: 50%;
+  font-size: 60%;
   padding: 3px 8px;
   border: 1px solid;
 }
@@ -834,7 +836,7 @@ footer {
 }
 .ai-history-time {
   font-family: var(--font-pixel);
-  font-size: 50%;
+  font-size: 60%;
   color: var(--text3);
 }
 .ai-history-msg { color: var(--text2); }
@@ -1254,7 +1256,7 @@ function renderAI(main) {
       <div class="ai-history-msg">"${escHtml(h.msg)}"</div>
       <div class="ai-history-effects">
         ${(h.effects||[]).map(e=>`
-          <span class="ai-effect-chip ${e.sign==='-'?'minus':'plus'}" style="font-size:50%;padding:2px 6px;">
+          <span class="ai-effect-chip ${e.sign==='-'?'minus':'plus'}" style="font-size:60%;padding:2px 6px;">
             ${getAllStatMap()[e.statId] ? statLabel(getAllStatMap()[e.statId]) : (getAllStatMap()[e.statId]?.label)||e.statId} ${e.sign}${Math.abs(e.value)}
           </span>`).join('')}
       </div>
@@ -1323,7 +1325,7 @@ function renderAI(main) {
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
               ${getAllStats().map(s=>`
                 <div style="display:flex;justify-content:space-between;padding:3px 6px;background:var(--bg);border:1px solid var(--border2);">
-                  <span style="font-family:var(--font-pixel);font-size:50%;color:var(--accent);">${statLabel(s)}</span>
+                  <span style="font-family:var(--font-pixel);font-size:60%;color:var(--accent);">${statLabel(s)}</span>
                   <span style="font-family:var(--font-pixel);font-size:60%;color:var(--gold);">${state.stats[s.id]||0}</span>
                 </div>`).join('')}
             </div>
@@ -1755,11 +1757,11 @@ function calendarHTML() {
           ${taskSelector}
           <div style="display:flex;gap:8px;margin-left:auto;">
             <div style="background:var(--bg);border:1px solid var(--border2);padding:4px 10px;text-align:center;">
-              <div style="font-family:var(--font-pixel);font-size:50%;color:var(--text3);">${t('calendar.streak')}</div>
+              <div style="font-family:var(--font-pixel);font-size:60%;color:var(--text3);">${t('calendar.streak')}</div>
               <div style="font-family:var(--font-pixel);font-size:90%;color:var(--gold);">${streak}${day}</div>
             </div>
             <div style="background:var(--bg);border:1px solid var(--border2);padding:4px 10px;text-align:center;">
-              <div style="font-family:var(--font-pixel);font-size:50%;color:var(--text3);">${t('calendar.total')}</div>
+              <div style="font-family:var(--font-pixel);font-size:60%;color:var(--text3);">${t('calendar.total')}</div>
               <div style="font-family:var(--font-pixel);font-size:90%;color:var(--gold);">${totalDone}${day}</div>
             </div>
           </div>
