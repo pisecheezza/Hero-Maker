@@ -33,10 +33,10 @@ E html>
   --text3:      #8c6e3a;
   --bar1:       #8c5e20;
   --bar2:       #d4a85a;
-  --done:      #166534;    /* 아주 어두운 녹색 (대비 강조) */
-  --done-bg:   #dcfce7;    /* 매우 밝은 녹색 배경 */
-  --red:       #9f1239;    /* 아주 어두운 빨간색 (대비 강조) */
-  --red-bg:    #fee2e2;    /* 매우 밝은 분홍색 배경 */
+  --done:      #1a7638;    /* 명확한 녹색 */
+  --done-bg:   #b8dcc0;    /* 색감이 뚜렷하게 느껴지는 진한 녹색 배경 */
+  --red:       #b91c1c;    /* 명확한 빨간색 */
+  --red-bg:    #f0bcbc;    /* 색감이 뚜렷하게 느껴지는 진한 붉은색 배경 */
   --font-pixel: 'Press Start 2P', monospace;
   --font-body:  'Noto Sans KR', sans-serif;
 }
@@ -434,7 +434,7 @@ main {
 .task-meta-stat {
   font-family: var(--font-pixel);
   font-size: 60%;
-  color: var(--accent);
+  color: var(--text3);
   background: var(--panel2);
   padding: 1px 5px;
   border: 1px solid var(--border2);
@@ -1327,7 +1327,7 @@ function renderAI(main) {
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
               ${getAllStats().map(s=>`
                 <div style="display:flex;justify-content:space-between;padding:3px 6px;background:var(--bg);border:1px solid var(--border2);">
-                  <span style="font-family:var(--font-pixel);font-size:60%;color:var(--accent);">${statLabel(s)}</span>
+                  <span style="font-family:var(--font-pixel);font-size:60%;color:var(--text2);">${statLabel(s)}</span>
                   <span style="font-family:var(--font-pixel);font-size:60%;color:var(--gold);">${state.stats[s.id]||0}</span>
                 </div>`).join('')}
             </div>
