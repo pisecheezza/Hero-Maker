@@ -343,16 +343,17 @@ main {
 .pm-btn-primary {
   background: var(--accent2);
   border-color: var(--accent);
-  color: #fff;
-  text-shadow: 1px 1px 0 var(--text3);
+  color: var(--text2);
+  text-shadow: 1px 1px 0 var(--accent);
   box-shadow: 2px 2px 0 var(--accent2);
 }
-.pm-btn-primary:hover { background: #7c3db0; }
+.pm-btn-primary:hover { background: #6040a0; /* 채도를 조금 낮춘 범용 보라색 */
+  transition: background 0.2s ease; }
 .pm-btn-success {
   background: var(--accent2); /* 테마 accent2와 동일 */
   border-color: var(--accent);
-  color: #fff;
-  text-shadow: 1px 1px 0 var(--text3);
+  color: var(--text);
+  text-shadow: 1px 1px 0 var(--accent);
   box-shadow: 2px 2px 0 var(--accent2);
 }
 .pm-btn-danger {
