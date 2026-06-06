@@ -207,7 +207,7 @@ main {
   width: 64px;
   font-family: var(--font-pixel);
   font-size: 80%;
-  color: var(--accent);
+  color: var(--text3);
   flex-shrink: 0;
   line-height: 1.4;
   word-break: break-all;
@@ -344,24 +344,25 @@ main {
   background: var(--accent2);
   border-color: var(--accent);
   color: #fff;
+  text-shadow: 1px 1px 0 var(--text3);
   box-shadow: 2px 2px 0 var(--accent2);
 }
 .pm-btn-primary:hover { background: #7c3db0; }
 .pm-btn-success {
-  /* 배경은 밝은 녹색, 글자와 테두리는 매우 어두운 녹색 */
-  background: #dcfce7; 
-  border-color: #166534;
-  color: #166534;
-  box-shadow: 2px 2px 0 #166534;
+  background: var(--accent2); /* 테마 accent2와 동일 */
+  border-color: var(--accent);
+  color: #fff;
+  text-shadow: 1px 1px 0 var(--text3);
+  box-shadow: 2px 2px 0 var(--accent2);
 }
 .pm-btn-danger {
-  /* 배경은 옅은 빨간색, 글자와 테두리는 어두운 빨간색 */
-  background: #fee2e2;
-  border-color: #991b1b;
-  color: #991b1b;
-  box-shadow: 2px 2px 0 #991b1b;
+  background: #d49595; /* sageGreen과 톤을 맞춘 톤다운된 레드 */
+  border-color: #b06060;
+  color: #fff;
+  text-shadow: 1px 1px 0 #703030;
+  box-shadow: 2px 2px 0 #d49595;
 }
-.pm-btn-danger:hover { background: #fecaca;; }
+.pm-btn-danger:hover { background: #c07878; }
 .pm-btn-sm { padding: 4px 10px; font-size: 60%; }
 .pm-btn-full { width: 100%; }
 
@@ -748,7 +749,7 @@ footer {
 .chat-bubble.user .bubble-text {
   background: var(--accent2);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--text);
   font-family: var(--font-pixel);
   font-size: 60%;
   word-break: break-all;
@@ -776,7 +777,7 @@ footer {
   padding: 3px 8px;
   border: 1px solid;
 }
-.ai-effect-chip.plus  { color: var(--done);  border-color: var(--done);  background: #052e1644; }
+.ai-effect-chip.plus  { color: var(--done);  border-color: var(--done);  background: #052e1622; }
 .ai-effect-chip.minus { color: var(--red);   border-color: var(--red);   background: #7f1d1d22; }
 
 .ai-apply-btn {
@@ -1420,7 +1421,7 @@ async function sendAIMessage() {
   const statsContext = allStats.map(s => `${statLabel(s)}: ${state.stats[s.id]||0}`).join(', ');
   const statIdList   = allStats.map(s => s.id).join(', ');
 
-  const systemPrompt = `당신은 프린세스 메이커 2 스타일의 생활 RPG 게임 AI입니다. 사용자가 일상의 상황이나 사건을 말하면, 그 내용을 해석해서 캐릭터의 스테터스 변화를 제안해야 합니다. 사용자를 호칭할 때에는 용사님으로 합니다.
+  const systemPrompt = `당신은 프린세스 메이커 2 스타일의 생활 RPG 게임 AI입니다. 사용자가 일상의 상황이나 사건을 말하면, 그 내용을 해석해서 캐릭터의 스테터스 변화를 제안해야 합니다. 호칭이 필요한 경우는 용사님으로 합니다.
 
 스테터스 목록과 현재 수치:
 ${statsContext}
@@ -1433,10 +1434,10 @@ ${statsContext}
 - 스트레스(stress)는 나쁜 일이면 증가(+), 좋은 일이면 감소(-)입니다
 - 업보(karma)는 나쁜 행동이면 증가, 선한 행동이면 감소입니다
 - 반드시 JSON 블록을 포함해서 응답하세요
-- 반드시 사용자가 사용한 언어와 일치하는 언어로 응답하세요
+- 반드시 사용자가 입력한 언어와 일치하는 언어로 응답하세요
 - 공감 멘트는 3문장 이내로 짧게 작성하세요
 
-응답 형식: 자연스럽게 상황을 공감하며 해석한 뒤, 반드시 아래 형식의 JSON을 포함하세요:
+응답 형식: 자연스럽게 상황을 공감하며 해석한 뒤, 반드시 사용자가 입력한 언어(KR, JP, EN, ZH, DE, FR, ES, RU)와 일치하는 언어로  반드시 아래 형식의 JSON을 포함하세요:
 
 \`\`\`json
 {
