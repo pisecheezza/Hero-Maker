@@ -33,12 +33,12 @@ E html>
   --text3:      #8c6e3a;
   --bar1:       #8c5e20;
   --bar2:       #d4a85a;
-  --done:      #1a7638;    /* 명확한 녹색 */
+  --done:      #0ea32e;    /* 명확한 녹색 */
   --done-bg:   #b8dcc0;    /* 색감이 뚜렷하게 느껴지는 진한 녹색 배경 */
-  --red:       #b91c1c;    /* 명확한 빨간색 */
+  --red:       #dc2626;    /* 명확한 빨간색 */
   --red-bg:    #f0bcbc;    /* 색감이 뚜렷하게 느껴지는 진한 붉은색 배경 */
-  --font-pixel: 'Press Start 2P', monospace;
-  --font-body:  'Noto Sans KR', sans-serif;
+  --font-pixel: Verdana, sans-serif; 
+  --font-body: Verdana, sans-serif;
 }
 
 html, body {
@@ -264,8 +264,8 @@ main {
   border-color: var(--accent);
   box-shadow: 0 0 10px var(--accent2);
 }
-.stat-card-en { font-family: var(--font-pixel); font-size: 60%; color: var(--text3); margin-bottom: 4px; }
-.stat-card-val { font-family: var(--font-pixel); font-size: 80%; color: var(--gold); margin-bottom: 4px; }
+.stat-card-en { font-family: var(--font-pixel); font-size: 80%; color: var(--text3); margin-bottom: 4px; }
+.stat-card-val { font-family: var(--font-pixel); font-size: 90%; color: var(--gold); margin-bottom: 4px; }
 .stat-card-label { font-size: 80%; color: var(--accent); }
 
 /* ─── TASK VIEW ──────────────────────────────────────────────────────────── */
@@ -285,7 +285,7 @@ main {
   border: 1px solid var(--border);
   color: var(--text);
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   padding: 8px 10px;
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -299,7 +299,7 @@ main {
   border: 1px solid var(--border);
   color: var(--text);
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   padding: 8px 10px;
   outline: none;
   cursor: pointer;
@@ -316,7 +316,7 @@ main {
 
 .form-label {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--text3);
   margin-bottom: 3px;
 }
@@ -329,7 +329,7 @@ main {
   gap: 6px;
   padding: 8px 16px;
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   cursor: pointer;
   border: 2px solid;
   text-shadow: var(--btn-shadow, 1px 1px 0 #aaa);
@@ -364,7 +364,7 @@ main {
   box-shadow: 2px 2px 0 #d49595;
 }
 .pm-btn-danger:hover { background: #c07878; }
-.pm-btn-sm { padding: 4px 10px; font-size: 60%; }
+.pm-btn-sm { padding: 4px 10px; font-size: 80%; }
 .pm-btn-full { width: 100%; }
 
 /* task list */
@@ -404,7 +404,7 @@ main {
 }
 .task-check:hover { border-color: var(--accent); }
 .task-item.done .task-check {
-  background: #166534;
+  background: #bbf7d0;
   border-color: var(--done);
   color: var(--done);
 }
@@ -412,7 +412,7 @@ main {
 .task-info { flex: 1; min-width: 0; }
 .task-name {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--text);
   white-space: nowrap;
   overflow: hidden;
@@ -433,7 +433,7 @@ main {
 }
 .task-meta-stat {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--text3);
   background: var(--panel2);
   padding: 1px 5px;
@@ -441,7 +441,7 @@ main {
 }
 .task-meta-val {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--gold);
 }
 
@@ -471,7 +471,7 @@ main {
 }
 .progress-label {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--text3);
   margin-bottom: 4px;
   display: flex;
@@ -489,7 +489,7 @@ main {
   padding: 5px 8px;
   animation: slideIn 0.15s ease;
 }
-.stat-effect-row .pm-select { flex: 1; font-size: 60%; padding: 4px 6px; min-width: 0; }
+.stat-effect-row .pm-select { flex: 1; font-size: 80%; padding: 4px 6px; min-width: 0; }
 .stat-effect-row .pm-input  { width: 50px; flex-shrink: 0; text-align: center; font-size: 70%; padding: 4px 6px; }
 
 /* ±  sign toggle */
@@ -529,7 +529,7 @@ main {
   border: 1px dashed var(--border2);
   color: var(--text3);
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   padding: 5px 10px;
   cursor: pointer;
   width: 100%;
@@ -634,13 +634,13 @@ main {
   font-size: 80%;
   gap: 8px;
 }
-.info-row-key { color: var(--text3); font-family: var(--font-pixel); font-size: 70%; }
-.info-row-val { color: var(--accent); font-family: var(--font-pixel); font-size: 70%; word-break: break-all;}
+.info-row-key { color: var(--text3); font-family: var(--font-pixel); font-size: 80%; }
+.info-row-val { color: var(--accent); font-family: var(--font-pixel); font-size: 80%; word-break: break-all;}
 
 .danger-zone { display: flex; flex-direction: column; gap: 8px; }
 .danger-note {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--red);
   line-height: 2;
   background: var(--red-bg);
@@ -656,7 +656,7 @@ footer {
   display: flex;
   justify-content: center;
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--text3);
   letter-spacing: 2px;
 }
@@ -678,10 +678,11 @@ footer {
   color: var(--done);
   font-family: var(--font-pixel);
   font-size: 70%;
+  font-weight: bold;
   padding: 8px 14px;
-  box-shadow: 0 0 16px #4ade8044;
+  box-shadow: 0 0 16px #ffffff44;
   animation: toastIn 0.2s ease, toastOut 0.3s ease 2.5s forwards;
-  text-shadow: 0 0 8px var(--done);
+  text-shadow: 0 0 8px #fff;
 }
 @keyframes toastIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: none; } }
 @keyframes toastOut { to { opacity: 0; transform: translateX(20px); } }
@@ -732,7 +733,7 @@ footer {
 
 .bubble-label {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--text3);
   padding: 0 4px;
 }
@@ -752,7 +753,7 @@ footer {
   border-color: var(--accent);
   color: var(--text);
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   word-break: break-all;
 }
 .chat-bubble.ai .bubble-text {
@@ -774,7 +775,7 @@ footer {
 }
 .ai-effect-chip {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   padding: 3px 8px;
   border: 1px solid;
 }
@@ -838,7 +839,7 @@ footer {
 }
 .ai-history-time {
   font-family: var(--font-pixel);
-  font-size: 60%;
+  font-size: 80%;
   color: var(--text3);
 }
 .ai-history-msg { color: var(--text2); }
@@ -1236,7 +1237,7 @@ function renderAI(main) {
       </div>
       <div class="ai-apply-btn">
         <button class="pm-btn pm-btn-success pm-btn-sm" onclick="applyAIEffects(${m.id})">${t('ai.apply')}</button>
-        ${m.applied ? `<span style="font-family:var(--font-pixel);font-size:7px;color:var(--done);margin-left:8px;">${t('ai.applied')}</span>` : ''}
+        ${m.applied ? `<span style="font-family:var(--font-pixel);font-size:80%;color:var(--done);margin-left:8px;">${t('ai.applied')}</span>` : ''}
       </div>` : '';
     const isError = m.content.startsWith('⚠');
     return `
@@ -1258,7 +1259,7 @@ function renderAI(main) {
       <div class="ai-history-msg">"${escHtml(h.msg)}"</div>
       <div class="ai-history-effects">
         ${(h.effects||[]).map(e=>`
-          <span class="ai-effect-chip ${e.sign==='-'?'minus':'plus'}" style="font-size:60%;padding:2px 6px;">
+          <span class="ai-effect-chip ${e.sign==='-'?'minus':'plus'}" style="font-size:80%;padding:2px 6px;">
             ${getAllStatMap()[e.statId] ? statLabel(getAllStatMap()[e.statId]) : (getAllStatMap()[e.statId]?.label)||e.statId} ${e.sign}${Math.abs(e.value)}
           </span>`).join('')}
       </div>
@@ -1327,8 +1328,8 @@ function renderAI(main) {
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
               ${getAllStats().map(s=>`
                 <div style="display:flex;justify-content:space-between;padding:3px 6px;background:var(--bg);border:1px solid var(--border2);">
-                  <span style="font-family:var(--font-pixel);font-size:60%;color:var(--text2);">${statLabel(s)}</span>
-                  <span style="font-family:var(--font-pixel);font-size:60%;color:var(--gold);">${state.stats[s.id]||0}</span>
+                  <span style="font-family:var(--font-pixel);font-size:80%;color:var(--text2);">${statLabel(s)}</span>
+                  <span style="font-family:var(--font-pixel);font-size:80%;color:var(--gold);">${state.stats[s.id]||0}</span>
                 </div>`).join('')}
             </div>
           </div>
@@ -1678,7 +1679,7 @@ function renderTasks(main) {
         <div class="window">
           <div class="window-title">
             <span class="window-title-icon">📜</span> ${t('tasks.listTitle')}
-            <span style="margin-left:auto;font-size:7px;color:var(--gold);">${done} / ${total} ${t('tasks.done')}</span>
+            <span style="margin-left:auto;font-size:80%;color:var(--gold);">${done} / ${total} ${t('tasks.done')}</span>
           </div>
           <div class="window-body">
             <div class="progress-label"><span>${t('tasks.progress')}</span><span>${pct}%</span></div>
@@ -1694,9 +1695,12 @@ function renderTasks(main) {
 // ── CALENDAR (tasks 탭 하단에 통합) ──
 function calendarHTML() {
   const tasks = state.tasks;
-  if (!state._calYear)  state._calYear  = new Date().getFullYear();
-  if (!state._calMonth) state._calMonth = new Date().getMonth();
-  if (!state._calTask && tasks.length)  state._calTask = tasks[0].id;
+  const now = new Date();
+  
+  // 수정된 초기화 로직: 값이 없을 때만 현재 날짜로 설정
+  if (state._calYear === undefined) state._calYear = now.getFullYear();
+  if (state._calMonth === undefined) state._calMonth = now.getMonth();
+  if (!state._calTask && tasks.length) state._calTask = tasks[0].id;
 
   const year  = state._calYear;
   const month = state._calMonth;
@@ -1719,7 +1723,7 @@ function calendarHTML() {
 
   const dayNames = t('calendar.days');
   const dayHeaders = dayNames.map((d,i) =>
-    `<div style="text-align:center;font-family:var(--font-pixel);font-size:7px;
+    `<div style="text-align:center;font-family:var(--font-pixel);font-size:80%;
       color:${i===0?'var(--red)':i===6?'var(--accent)':'var(--text3)'};padding:3px 0;">${d}</div>`
   ).join('');
 
@@ -1735,8 +1739,8 @@ function calendarHTML() {
       justify-content:center;gap:1px;
       background:${done?'var(--done-bg)':isToday?'var(--panel2)':'var(--bg)'};
       border:1px solid ${isToday?'var(--accent)':done?'var(--done)':'var(--border2)'};font-size:8px;">
-      <span style="font-family:var(--font-pixel);font-size:7px;color:${col};">${d}</span>
-      ${done?`<span style="font-size:7px;color:var(--done);">✔</span>`:''}
+      <span style="font-family:var(--font-pixel);font-size:80%;color:${col};">${d}</span>
+      ${done?`<span style="font-size:80%;color:var(--done);">✔</span>`:''}
     </div>`;
   }
 
@@ -1759,11 +1763,11 @@ function calendarHTML() {
           ${taskSelector}
           <div style="display:flex;gap:8px;margin-left:auto;">
             <div style="background:var(--bg);border:1px solid var(--border2);padding:4px 10px;text-align:center;">
-              <div style="font-family:var(--font-pixel);font-size:60%;color:var(--text3);">${t('calendar.streak')}</div>
+              <div style="font-family:var(--font-pixel);font-size:80%;color:var(--text3);">${t('calendar.streak')}</div>
               <div style="font-family:var(--font-pixel);font-size:90%;color:var(--gold);">${streak}${day}</div>
             </div>
             <div style="background:var(--bg);border:1px solid var(--border2);padding:4px 10px;text-align:center;">
-              <div style="font-family:var(--font-pixel);font-size:60%;color:var(--text3);">${t('calendar.total')}</div>
+              <div style="font-family:var(--font-pixel);font-size:80%;color:var(--text3);">${t('calendar.total')}</div>
               <div style="font-family:var(--font-pixel);font-size:90%;color:var(--gold);">${totalDone}${day}</div>
             </div>
           </div>
@@ -1782,6 +1786,23 @@ function calendarHTML() {
     </div>`;
 }
 
+function calPrev() {
+  state._calMonth -= 1;
+  if (state._calMonth < 0) {
+    state._calMonth = 11;
+    state._calYear -= 1;
+  }
+  render();
+}
+
+function calNext() {
+  state._calMonth += 1;
+  if (state._calMonth > 11) {
+    state._calMonth = 0;
+    state._calYear += 1;
+  }
+  render();
+}
 // ── SETTINGS ──
 function renderSettings(main) {
   const themeItems = Object.entries(THEMES).map(([key, th]) => `
