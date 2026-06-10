@@ -1735,10 +1735,10 @@ function calendarHTML() {
     const isToday = dk === today;
     const dow = new Date(year, month, d).getDay();
     const col = dow===0?'var(--red)':dow===6?'var(--accent)':'var(--text)';
-    cells += `<div style="aspect-ratio:1;display:flex;flex-direction:column;align-items:center;
-      justify-content:center;gap:1px;
-      background:${done?'var(--done-bg)':isToday?'var(--panel2)':'var(--bg)'};
-      border:1px solid ${isToday?'var(--accent)':done?'var(--done)':'var(--border2)'};font-size:8px;">
+    cells += `<div onclick="toggleCalDate('${dk}')" style="cursor:pointer;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:1px;
+  background:${done?'var(--done-bg)':isToday?'var(--panel2)':'var(--bg)'};
+  border:1px solid ${isToday?'var(--accent)':done?'var(--done)':'var(--border2)'};font-size:8px;">
       <span style="font-family:var(--font-pixel);font-size:80%;color:${col};">${d}</span>
       ${done?`<span style="font-size:80%;color:var(--done);">✔</span>`:''}
     </div>`;
@@ -1801,6 +1801,18 @@ function calNext() {
     state._calMonth = 0;
     state._calYear += 1;
   }
+  render();
+}
+function toggleCalDate(dk) {
+  if (!state._calTask) return;
+  if (!state.taskLog[state._calTask]) state.taskLog[state._calTask] = {};
+  const current = state.taskLog[state._calTask][dk];
+  if (current) {
+    delete state.taskLog[state._calTask][dk];
+  } else {
+    state.taskLog[state._calTask][dk] = true;
+  }
+  persist();
   render();
 }
 // ── SETTINGS ──
