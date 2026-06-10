@@ -1231,7 +1231,7 @@ function renderAI(main) {
     const effsHTML = (m.effects && m.effects.length) ? `
       <div class="ai-effects">
         ${m.effects.map(e => `
-          <span class="ai-effect-chip ${e.sign==='-'?'minus':'plus'}">
+          <span class="ai-effect-chip ${e.statId==='stress' ? (e.sign==='-'?'plus':'minus') : (e.sign==='-'?'minus':'plus')}">
             ${getAllStatMap()[e.statId] ? statLabel(getAllStatMap()[e.statId]) : (getAllStatMap()[e.statId]?.label)||e.statId} ${e.sign==='+'?'+':''}${e.sign}${Math.abs(e.value)}
           </span>`).join('')}
       </div>
@@ -1259,7 +1259,7 @@ function renderAI(main) {
       <div class="ai-history-msg">"${escHtml(h.msg)}"</div>
       <div class="ai-history-effects">
         ${(h.effects||[]).map(e=>`
-          <span class="ai-effect-chip ${e.sign==='-'?'minus':'plus'}" style="font-size:80%;padding:2px 6px;">
+          <span class="ai-effect-chip ${e.statId==='stress' ? (e.sign==='-'?'plus':'minus') : (e.sign==='-'?'minus':'plus')}" style="font-size:80%;padding:2px 6px;">
             ${getAllStatMap()[e.statId] ? statLabel(getAllStatMap()[e.statId]) : (getAllStatMap()[e.statId]?.label)||e.statId} ${e.sign}${Math.abs(e.value)}
           </span>`).join('')}
       </div>
@@ -1437,8 +1437,9 @@ ${statsContext}
 - 업보(karma)는 나쁜 행동이면 증가, 선한 행동이면 감소입니다
 - 반드시 JSON 블록을 포함해서 응답하세요
 - 공감 멘트는 3문장 이내로 짧게 작성하세요
+- CRITICAL: You MUST reply in the exact same language the user wrote in. If the user writes in English, reply in English. If Japanese, reply in Japanese. If Korean, reply in Korean. No exceptions.
 
-응답 형식: YOU MUST USE THE LANGUAGE OF THE USER'S FORMER PROMPT. 자연스럽게 상황을 공감하며 해석한 뒤, 반드시 아래 형식의 JSON을 포함하세요:
+IMPORTANT: Detect the user's input language and respond ONLY in that language. Then include the JSON block:
 
 \`\`\`json
 {
